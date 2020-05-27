@@ -1,2 +1,2 @@
 # easyInterfacingGui
-Generic GUI for easyScience application
+Generic GUI for easyScience applications
