@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "easyappgui"
+name = "easyAppGui"
 version = "0.3.0"
 description = "Generic GUI for easyScience applications"
 authors = ["Andrew Sazonov", "Simon Ward"]
