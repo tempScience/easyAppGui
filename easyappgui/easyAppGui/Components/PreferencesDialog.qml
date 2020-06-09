@@ -1,9 +1,9 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
-import QtQuick.Controls.impl 2.14
-import QtQuick.Controls.Material 2.14
-import QtQuick.Controls.Material.impl 2.14
-import QtQuick.XmlListModel 2.14
+import QtQuick 2.13
+import QtQuick.Controls 2.13
+import QtQuick.Controls.impl 2.13
+import QtQuick.Controls.Material 2.13
+import QtQuick.Controls.Material.impl 2.13
+import QtQuick.XmlListModel 2.13
 
 //import easyInterface.QtQuick 1.0 as InterfaceQtQuick
 //import easyInterface.Globals 1.0 as InterfaceGlobals

@@ -1,5 +1,5 @@
-import QtQuick 2.14
-import QtQuick.Templates 2.14 as T
+import QtQuick 2.13
+import QtQuick.Templates 2.13 as T
 
 import easyAppGui.Style 1.0 as EaStyle
 import easyAppGui.Animations 1.0 as EaAnimations

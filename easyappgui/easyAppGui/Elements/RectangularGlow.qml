@@ -1,4 +1,4 @@
-import QtQuick 2.14
+import QtQuick 2.13
 
 /*
    A cross-graphics API implementation of QtGraphicalEffects' RectangularGlow.

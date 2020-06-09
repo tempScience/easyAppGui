@@ -1,5 +1,5 @@
-import QtQuick 2.14
-import QtQuick.Templates 2.14 as T
+import QtQuick 2.13
+import QtQuick.Templates 2.13 as T
 
 T.Popup {
     id: control
