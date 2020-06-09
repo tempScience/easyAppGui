@@ -1,8 +1,8 @@
-import QtQuick 2.12
-//import QtGraphicalEffects 1.12
-import QtQuick.Templates 2.12 as T
-//import QtQuick.Controls 2.12
-//import QtQuick.Controls.impl 2.12
+import QtQuick 2.13
+//import QtGraphicalEffects 1.13
+import QtQuick.Templates 2.13 as T
+//import QtQuick.Controls 2.13
+//import QtQuick.Controls.impl 2.13
 
 import easyAppGui.Style 1.0 as EaStyle
 

@@ -1,9 +1,9 @@
-import QtQuick 2.12
-import QtQuick.Templates 2.12 as T
-import QtQuick.Controls 2.12
-import QtQuick.Controls.impl 2.12
-import QtQuick.Controls.Material 2.12
-import QtQuick.Controls.Material.impl 2.12
+import QtQuick 2.13
+import QtQuick.Templates 2.13 as T
+import QtQuick.Controls 2.13
+import QtQuick.Controls.impl 2.13
+import QtQuick.Controls.Material 2.13
+import QtQuick.Controls.Material.impl 2.13
 
 import easyAppGui.Style 1.0 as EaStyle
 import easyAppGui.Animations 1.0 as EaAnimations
