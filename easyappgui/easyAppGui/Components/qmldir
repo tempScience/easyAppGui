@@ -1,0 +1,26 @@
+module Components
+
+ApplicationBar 1.0 ApplicationBar.qml
+ApplicationWindow 1.0 ApplicationWindow.qml
+
+AppBarCentralTabs 1.0 AppBarCentralTabs.qml
+AppBarLeftButtons 1.0 AppBarLeftButtons.qml
+AppBarRightButtons 1.0 AppBarRightButtons.qml
+
+Page 1.0 Page.qml
+PagesView 1.0 PagesView.qml
+
+MainArea 1.0 MainArea.qml
+MainAreaTabs 1.0 MainAreaTabs.qml
+MainAreaContent 1.0 MainAreaContent.qml
+
+MainContent 1.0 MainContent.qml
+MainContentItems 1.0 MainContentItems.qml
+MainContentTabs 1.0 MainContentTabs.qml
+
+
+SideBar 1.0 SideBar.qml
+
+StatusBar 1.0 StatusBar.qml
+
+PreferencesDialog 1.0 PreferencesDialog.qml
