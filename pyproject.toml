@@ -2,9 +2,13 @@
 name = "easyappgui"
 version = "0.2.0"
 description = "Generic GUI for easyScience applications"
-authors = ["Andrew Sazonov", "Simon Ward"]
 license = "GPL-3.0-only"
-readme = 'README.md'
+authors = ["Andrew Sazonov", "Simon Ward"]
+readme = "README.md"
+homepage = "https://github.com/tempscience"
+repository = "https://easyscience.apptimity.com/"
+documentation = "https://github.com/tempscience"
+include = ["CHANGELOG.md"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
