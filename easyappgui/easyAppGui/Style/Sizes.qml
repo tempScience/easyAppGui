@@ -19,7 +19,7 @@ QtObject {
     property int appWindowMinimumWidth: appWindowWidthMedium
     property int appWindowMinimumHeight: appWindowHeightMedium
 
-    property int appWindowWidth: Qt.platform.pluginName === "wasm" ? Screen.width : Math.min(appWindowWidthLarge, Screen.width)
+    property int appWindowWidth: Qt.platform.pluginName === "wasm" ? Screen.width : Math.min(appWindowWidthVeryLarge, Screen.width)
     property int appWindowHeight: Qt.platform.pluginName === "wasm" ? Screen.height : Math.min(appWindowHeightLarge, Screen.height)
 
     property int appWindowX: Qt.platform.pluginName === "wasm" ? 0 : (Screen.width - appWindowWidth) * 0.5
