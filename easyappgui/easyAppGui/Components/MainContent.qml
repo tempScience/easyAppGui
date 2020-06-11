@@ -1,6 +1,8 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 
+import easyAppGui.Elements 1.0 as EaElements
+
 Item {
     id: mainArea
 
@@ -9,7 +11,7 @@ Item {
 
     anchors.fill: parent
 
-    TabBar {
+    EaElements.TabBar {
         id: tabs
 
         anchors.top: mainArea.top
@@ -24,6 +26,9 @@ Item {
         anchors.bottom: mainArea.bottom
         anchors.left: mainArea.left
         anchors.right: mainArea.right
+
+        clip: true
+        interactive: false
 
         currentIndex: tabs.currentIndex
     }

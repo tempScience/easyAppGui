@@ -6,7 +6,7 @@ SwipeView {
     //anchors.bottom: parent.bottom
     //anchors.left: parent.left
     //anchors.right: parent.right
-    anchors.fill: parent
+    //anchors.fill: parent
 
     clip: true
     interactive: false

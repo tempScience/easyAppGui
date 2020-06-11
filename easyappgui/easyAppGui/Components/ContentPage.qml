@@ -18,6 +18,8 @@ Item {
         anchors.bottom: page.bottom
         anchors.left: page.left
         anchors.right: sideBarContainer.left
+
+        clip: true
     }
 
     // Sidebar container
@@ -29,6 +31,8 @@ Item {
         anchors.right: page.right
         //width: childrenRect.width === border.width ? 0 : EaStyle.Sizes.sideBarWidth
         width: EaStyle.Sizes.sideBarWidth
+
+        clip: true
 
         // Vertical border on the left side
         Rectangle {
