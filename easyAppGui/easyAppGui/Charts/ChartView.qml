@@ -15,7 +15,7 @@ ChartView {
     antialiasing: true
 
     //theme: Globals.Colors.chartTheme
-    animationDuration: Globals.Variables.chartAnimationDuration
+    animationDuration: EaStyle.Times.chartAnimation
     animationOptions: ChartView.SeriesAnimations
 
     legend.visible: false
