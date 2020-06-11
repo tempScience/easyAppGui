@@ -57,4 +57,10 @@ QtObject {
     property color dialogOutsideBackground: isDarkTheme ? "#80000000" : "#80ffffff"
     property color dialogForeground: themeForeground
 
+    // Charts
+    property color chartForeground: themeForeground
+    property color chartBackground: "transparent"
+    property color chartPlotAreaBackground: "transparent"
+
+
 }
