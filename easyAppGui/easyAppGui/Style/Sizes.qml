@@ -16,11 +16,11 @@ QtObject {
     property int appWindowHeightXGA: scalePx(768)
     property int appWindowHeightWXGA: scalePx(800)
 
-    property int appWindowMinimumWidth: appWindowWidthVGA
-    property int appWindowMinimumHeight: appWindowHeightVGA
+    property int appWindowMinimumWidth: appWindowWidthXGA
+    property int appWindowMinimumHeight: appWindowHeightSVGA
 
-    property int appWindowWidth: Qt.platform.pluginName === "wasm" ? Screen.width : Math.min(appWindowWidthXGA, Screen.width)
-    property int appWindowHeight: Qt.platform.pluginName === "wasm" ? Screen.height : Math.min(appWindowHeightXGA, Screen.height)
+    property int appWindowWidth: Qt.platform.pluginName === "wasm" ? Screen.width : Math.min(appWindowMinimumWidth, Screen.width)
+    property int appWindowHeight: Qt.platform.pluginName === "wasm" ? Screen.height : Math.min(appWindowMinimumHeight, Screen.height)
 
     property int appWindowX: Qt.platform.pluginName === "wasm" ? 0 : (Screen.width - appWindowWidth) * 0.5
     property int appWindowY: Qt.platform.pluginName === "wasm" ? 0 : (Screen.height - appWindowHeight) * 0.5
