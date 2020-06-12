@@ -31,7 +31,10 @@ QtObject {
 
     // Sidebar
     readonly property int sideBarWidth: 450
-    readonly property int groupBoxSpacing: 12
+    property int groupBoxSpacing: fontPixelSize
+    property int sideBarPadding: fontPixelSize
+    property int sideBarButtonHeight: Math.round(fontPixelSize * 2.5)
+    property int sideBarButtonWidth: sideBarWidth
 
     // Status bar
     property int statusBarHeight: Math.round(fontPixelSize * 2)

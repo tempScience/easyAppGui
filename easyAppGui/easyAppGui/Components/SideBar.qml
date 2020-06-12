@@ -58,6 +58,9 @@ Item {
         anchors.left: sideBarContainer.left
         anchors.right: sideBarContainer.right
 
+        //anchors.margins: 0
+        padding: 0
+
         clip: true
         interactive: false
 

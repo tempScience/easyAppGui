@@ -23,7 +23,7 @@ T.ApplicationWindow {
     font.family: EaStyle.Fonts.fontFamily
     font.pixelSize: EaStyle.Fonts.fontPixelSize
 
-    color: EaStyle.Colors.mainAreaBackground
+    color: EaStyle.Colors.contentBackground
     Behavior on color {
         EaAnimations.ThemeChange {}
     }
