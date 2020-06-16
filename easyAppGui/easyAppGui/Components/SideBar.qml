@@ -12,19 +12,15 @@ Item {
     property alias basicControls: basicControlsContainer.data
     property alias advancedControls: advancedControlsContainer.data
 
-    width: parent.width
-    height: parent.height
+    anchors.fill: parent
 
     // Sidebar tabs
-    TabBar {
+    EaElements.TabBar {
         id: sideBarTabs
 
         anchors.top: sideBarContainer.top
         anchors.left: sideBarContainer.left
         anchors.right: sideBarContainer.right
-        height: EaStyle.Sizes.tabBarHeight
-
-        spacing: 0
 
         // Basic controls tab button
         EaElements.TabButton {
@@ -61,6 +57,9 @@ Item {
         anchors.bottom: sideBarContainer.bottom
         anchors.left: sideBarContainer.left
         anchors.right: sideBarContainer.right
+
+        //anchors.margins: 0
+        padding: 0
 
         clip: true
         interactive: false

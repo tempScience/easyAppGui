@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "easyappgui"
+name = "easyAppGui"
 version = "0.2.0"
 description = "Generic GUI for easyScience applications"
 license = "GPL-3.0-only"
@@ -9,6 +9,9 @@ homepage = "https://github.com/tempscience"
 repository = "https://easyscience.apptimity.com/"
 documentation = "https://github.com/tempscience"
 include = ["CHANGELOG.md"]
+packages = [
+    { include = "easyAppGui" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"

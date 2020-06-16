@@ -45,8 +45,15 @@ QtObject {
     property color appBarComboBoxBackgroundPressed: isDarkTheme ? "#90666666" : "#ffffffff"
     property color appBarComboBoxBorder: isDarkTheme ? Qt.darker(appBarBackground, 1.1) : Qt.darker(appBarBackground, 1.05)
 
-    // Main area
-    property color mainAreaBackground: isDarkTheme ? "#3a3a3a" : "#f4f4f4"
+    // Content
+    property color contentBackground: isDarkTheme ? "#3a3a3a" : "#f4f4f4"
+    property color mainContentBackground: isDarkTheme ? "#474747" : "#fff"
+
+    // SideBar
+    property color sideBarButtonBackground: isDarkTheme ? "#333" : "#e9e9e9"
+    property color sideBarButtonBackgroundHovered: isDarkTheme ? "#222" : "#20666666"
+    property color sideBarButtonBackgroundPressed: isDarkTheme ? "#111" : "#40666666"
+    property color sideBarButtonForeground: isDarkTheme ? "#ccc" : "#444"
 
     // Status bar
     readonly property color statusBarBackground: appBarBackground
@@ -56,5 +63,11 @@ QtObject {
     property color dialogBackground: themeBackground
     property color dialogOutsideBackground: isDarkTheme ? "#80000000" : "#80ffffff"
     property color dialogForeground: themeForeground
+
+    // Charts
+    property color chartForeground: themeForeground
+    property color chartBackground: "transparent"
+    property color chartPlotAreaBackground: "transparent"
+
 
 }

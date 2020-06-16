@@ -20,10 +20,13 @@ T.ToolButton {
 
     padding: 0
     spacing: 0
+
+    /*
     leftInset: 0
     rightInset: 0
     topInset: 0
     bottomInset: 0
+    */
 
     font.family: EaStyle.Fonts.fontFamily
     font.pixelSize: EaStyle.Fonts.pixelSize
@@ -37,7 +40,7 @@ T.ToolButton {
     }
     */
 
-    contentItem: Label {
+    contentItem: IconLabel {
         font.family: EaStyle.Fonts.iconsFamily
         font.pixelSize: control.font.pixelSize * 1.25
 
@@ -56,7 +59,9 @@ T.ToolButton {
     background: Rectangle {
         implicitWidth: EaStyle.Sizes.toolButtonHeight
         implicitHeight: EaStyle.Sizes.toolButtonHeight
+
         radius: EaStyle.Sizes.toolButtonHeight * 0.5
+
         color: rippleArea.containsMouse ?
                    (rippleArea.containsPress ?
                         EaStyle.Colors.appBarButtonBackgroundPressed :

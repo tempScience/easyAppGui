@@ -4,15 +4,19 @@ import QtQuick.Controls.Material 2.13
 import QtQuick.Controls.Material.impl 2.13
 
 import easyAppGui.Style 1.0 as EaStyle
+import easyAppGui.Animations 1.0 as EaAnimations
 
 T.TabBar {
     id: control
 
+    property bool showBottomBorder: true
+
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             contentWidth + leftPadding + rightPadding)
-    implicitHeight: 150//EaStyle.Sizes.tabBarHeight
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                             contentHeight + topPadding + bottomPadding)
 
-    spacing: 1
+    spacing: 0
 
     contentItem: ListView {
         model: control.contentModel
@@ -44,15 +48,19 @@ T.TabBar {
 
     background: Rectangle {
         //color: control.Material.backgroundColor
-        //color: "transparent"
-        color: "orange"
+        color: "transparent"
 
-        /*
-        layer.enabled: control.Material.elevation > 0
-        layer.effect: ElevationEffect {
-            elevation: control.Material.elevation
-            fullWidth: true
+        // tabs bottom border
+        Rectangle {
+            visible: showBottomBorder
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            height: EaStyle.Sizes.borderThickness
+            color: EaStyle.Colors.appBorder
+            Behavior on color {
+                EaAnimations.ThemeChange {}
+            }
         }
-        */
     }
 }

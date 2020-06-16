@@ -10,6 +10,8 @@ Rectangle {
 
     property alias text: label.text
 
+    //visible: EaGlobals.Variables.showAppStatusBar
+
     //Component.onCompleted: y = visible ? 0 : height
 
     width: parent.width

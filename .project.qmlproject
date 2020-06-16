@@ -4,11 +4,11 @@ Project {
     //mainFile: "App/Gui/main.qml"
 
     // List of module and plugin directories passed to QML runtime
-    importPaths: ["easyappgui"]
+    importPaths: ["easyAppGui"]
 
     // Include .qml files from specified directory and its subdirectories
     QmlFiles {
-        directory: "easyappgui"
+        directory: "easyAppGui"
     }
 
     // Include Module Definition Files (qmldir), as well as .ts and .qrc

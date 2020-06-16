@@ -17,10 +17,13 @@ T.ApplicationWindow {
     width: EaStyle.Sizes.appWindowWidth
     height: EaStyle.Sizes.appWindowHeight
 
+    minimumWidth: EaStyle.Sizes.appWindowMinimumWidth
+    minimumHeight: EaStyle.Sizes.appWindowMinimumHeight
+
     font.family: EaStyle.Fonts.fontFamily
     font.pixelSize: EaStyle.Fonts.fontPixelSize
 
-    color: EaStyle.Colors.mainAreaBackground
+    color: EaStyle.Colors.contentBackground
     Behavior on color {
         EaAnimations.ThemeChange {}
     }

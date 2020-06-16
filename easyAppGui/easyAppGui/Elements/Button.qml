@@ -6,9 +6,6 @@ import QtQuick.Controls.impl 2.13
 import easyAppGui.Style 1.0 as EaStyle
 import easyAppGui.Animations 1.0 as EaAnimations
 
-//import Globals 1.0 as Globals
-//import Templates.Animations 1.0 as Animations
-//import Templates.Controls 1.0
 
 T.Button {
     id: control
@@ -23,9 +20,6 @@ T.Button {
     padding: 12
     horizontalPadding: padding - 4
     spacing: 6
-
-    font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
 
     icon.width: 24
     icon.height: 24

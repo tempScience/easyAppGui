@@ -6,21 +6,21 @@ import QtQuick.Window 2.13
 QtObject {
 
     // Application window
-    property int appWindowHeightVerySmall: scalePx(300)
-    property int appWindowHeightMedium: scalePx(400)
-    property int appWindowHeightLarge: scalePx(460)
+    property int appWindowWidthVGA: scalePx(640)
+    property int appWindowWidthSVGA: scalePx(800)
+    property int appWindowWidthXGA: scalePx(1024)
+    property int appWindowWidthWXGA: scalePx(1280)
 
-    property int appWindowWidthVerySmall: scalePx(300)  // 1 combobox in appBar
-    property int appWindowWidthSmall: scalePx(380)      // 2 comboboxes in appBar
-    property int appWindowWidthMedium: scalePx(500)     // 3 comboboxes in appBar
-    property int appWindowWidthLarge: scalePx(620)      // 4 comboboxes in appBar
-    property int appWindowWidthVeryLarge: scalePx(880)  // 4 comboboxes with labels in appBar
+    property int appWindowHeightVGA: scalePx(480)
+    property int appWindowHeightSVGA: scalePx(600)
+    property int appWindowHeightXGA: scalePx(768)
+    property int appWindowHeightWXGA: scalePx(800)
 
-    property int appWindowMinimumWidth: appWindowWidthMedium
-    property int appWindowMinimumHeight: appWindowHeightMedium
+    property int appWindowMinimumWidth: appWindowWidthXGA
+    property int appWindowMinimumHeight: appWindowHeightSVGA
 
-    property int appWindowWidth: Qt.platform.pluginName === "wasm" ? Screen.width : Math.min(appWindowWidthLarge, Screen.width)
-    property int appWindowHeight: Qt.platform.pluginName === "wasm" ? Screen.height : Math.min(appWindowHeightLarge, Screen.height)
+    property int appWindowWidth: Qt.platform.pluginName === "wasm" ? Screen.width : Math.min(appWindowMinimumWidth, Screen.width)
+    property int appWindowHeight: Qt.platform.pluginName === "wasm" ? Screen.height : Math.min(appWindowMinimumHeight, Screen.height)
 
     property int appWindowX: Qt.platform.pluginName === "wasm" ? 0 : (Screen.width - appWindowWidth) * 0.5
     property int appWindowY: Qt.platform.pluginName === "wasm" ? 0 : (Screen.height - appWindowHeight) * 0.5
@@ -31,7 +31,10 @@ QtObject {
 
     // Sidebar
     readonly property int sideBarWidth: 450
-    readonly property int groupBoxSpacing: 12
+    property int groupBoxSpacing: fontPixelSize
+    property int sideBarPadding: fontPixelSize
+    property int sideBarButtonHeight: Math.round(fontPixelSize * 2.5)
+    property int sideBarButtonWidth: sideBarWidth
 
     // Status bar
     property int statusBarHeight: Math.round(fontPixelSize * 2)
