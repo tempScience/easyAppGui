@@ -41,7 +41,7 @@ QtObject {
     property int statusBarSpacing: fontPixelSize
 
     // Tabbar
-    property int tabBarHeight: Math.round(fontPixelSize * 2.5)
+    property int tabBarHeight: Math.round(fontPixelSize * 3)
 
     // Dialogs
     property int dialogElevation: Math.round(fontPixelSize * 2)
