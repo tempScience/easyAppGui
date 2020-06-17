@@ -112,4 +112,80 @@ ChartView {
         }
     }
     */
+
+    // Zoom rectangle
+    Rectangle{
+        id: recZoom
+
+        property int xScaleZoom: 0
+        property int yScaleZoom: 0
+
+        visible: false
+        transform: Scale { origin.x: 0; origin.y: 0; xScale: recZoom.xScaleZoom; yScale: recZoom.yScaleZoom}
+
+        border.color: EaStyle.Colors.themeAccent
+        border.width: 1
+
+        opacity: 0.5
+        color: "transparent"
+        Rectangle {
+            anchors.fill: parent
+            opacity: 0.3
+            color: EaStyle.Colors.themeAccent
+        }
+    }
+
+    // Left mouse button events
+    MouseArea {
+        anchors.fill: chart
+        acceptedButtons: Qt.LeftButton
+
+        onPressed: {
+            recZoom.x = mouseX
+            recZoom.y = mouseY
+            recZoom.visible = true
+        }
+
+        onMouseXChanged: {
+            if (mouseX > recZoom.x) {
+                recZoom.xScaleZoom = 1
+                recZoom.width = Math.min(mouseX, chart.width) - recZoom.x
+            } else {
+                recZoom.xScaleZoom = -1
+                recZoom.width = recZoom.x - Math.max(mouseX, 0)
+            }
+        }
+
+        onMouseYChanged: {
+            if (mouseY > recZoom.y) {
+                recZoom.yScaleZoom = 1
+                recZoom.height = Math.min(mouseY, chart.height) - recZoom.y
+            } else {
+                recZoom.yScaleZoom = -1
+                recZoom.height = recZoom.y - Math.max(mouseY, 0)
+            }
+        }
+
+        onReleased: {
+            const x = Math.min(recZoom.x, mouseX) - chart.anchors.leftMargin
+            const y = Math.min(recZoom.y, mouseY) - chart.anchors.topMargin
+
+            const width = recZoom.width
+            const height = recZoom.height
+
+            chart.zoomIn(Qt.rect(x, y, width, height))
+            recZoom.visible = false
+        }
+    }
+
+    // Right mouse button events
+    MouseArea {
+        anchors.fill: chart
+        acceptedButtons: Qt.RightButton
+
+        onClicked: {
+            chart.zoomReset()
+        }
+    }
+
 }
