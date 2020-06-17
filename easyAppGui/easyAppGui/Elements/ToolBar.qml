@@ -15,7 +15,7 @@ T.ToolBar {
     spacing: EaStyle.Sizes.appBarSpacing
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
     background: Rectangle {
         implicitHeight: EaStyle.Sizes.appBarHeight

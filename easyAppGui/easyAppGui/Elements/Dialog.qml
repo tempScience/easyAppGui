@@ -29,7 +29,7 @@ T.Dialog {
     bottomPadding: EaStyle.Sizes.fontPixelSize * 0.5
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
     enter: Transition {
         // grow_fade_in

@@ -25,7 +25,7 @@ T.ComboBox {
     rightPadding: padding + (control.mirrored || !indicator || !indicator.visible ? 0 : indicator.width + spacing)
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
     flat: true
     hoverEnabled: true
@@ -48,7 +48,7 @@ T.ComboBox {
         text: "\uf0d7"
 
         font.family: EaStyle.Fonts.iconsFamily
-        font.pixelSize: EaStyle.Fonts.fontPixelSize
+        font.pixelSize: EaStyle.Sizes.fontPixelSize
 
         ///color: control.enabled ? control.Material.foreground : control.Material.hintTextColor
         color: control.enabled ? EaStyle.Colors.themeForeground :  EaStyle.Colors.themeForegroundDisabled

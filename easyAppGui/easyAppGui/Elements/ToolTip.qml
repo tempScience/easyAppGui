@@ -16,23 +16,23 @@ T.ToolTip {
     property real backgroundOpacity: 0.9
 
     x: parent ? (parent.width - implicitWidth) / 2 : 0
-    y: -implicitHeight - EaStyle.Fonts.fontPixelSize
+    y: -implicitHeight - EaStyle.Sizes.fontPixelSize
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             contentWidth + leftPadding + rightPadding)
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              contentHeight + topPadding + bottomPadding)
 
-    margins: EaStyle.Fonts.fontPixelSize
-    padding: EaStyle.Fonts.fontPixelSize * 0.75
-    horizontalPadding: EaStyle.Fonts.fontPixelSize * 1.15
+    margins: EaStyle.Sizes.fontPixelSize
+    padding: EaStyle.Sizes.fontPixelSize * 0.75
+    horizontalPadding: EaStyle.Sizes.fontPixelSize * 1.15
 
     closePolicy: T.Popup.CloseOnEscape |
                  T.Popup.CloseOnPressOutsideParent |
                  T.Popup.CloseOnReleaseOutsideParent
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
     contentItem: Label {
         font: control.font

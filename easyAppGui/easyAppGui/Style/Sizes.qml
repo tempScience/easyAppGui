@@ -30,18 +30,18 @@ QtObject {
     property int appBarSpacing: fontPixelSize
 
     // Sidebar
-    readonly property int sideBarWidth: 450
+    readonly property int sideBarWidth: Math.round(fontPixelSize * 32)
     property int groupBoxSpacing: fontPixelSize
     property int sideBarPadding: fontPixelSize
     property int sideBarButtonHeight: Math.round(fontPixelSize * 2.5)
     property int sideBarButtonWidth: sideBarWidth
 
     // Status bar
-    property int statusBarHeight: Math.round(fontPixelSize * 2)
+    property int statusBarHeight: Math.round(fontPixelSize * 2.5)
     property int statusBarSpacing: fontPixelSize
 
     // Tabbar
-    property int tabBarHeight: Math.round(fontPixelSize * 2.0)
+    property int tabBarHeight: Math.round(fontPixelSize * 2.5)
 
     // Dialogs
     property int dialogElevation: Math.round(fontPixelSize * 2)
@@ -57,16 +57,19 @@ QtObject {
     property int touchSize: Math.round(fontPixelSize * 2.0)
 
     // Fonts
-    property int fontPixelSize: scalePx(14) //scalePx(Qt.application.font.pixelSize)
-
-    // Scales
-    property int defaultScale: 100
+    //property int fontPixelSize: scalePx(14) //scalePx(Qt.application.font.pixelSize)
+    property Text _text: Text { font.pixelSize: scalePx(14) }
+    property int fontPointSize: _text.font.pointSize
+    property int fontPixelSize: _text.font.pixelSize
 
     // Border
     readonly property int borderThickness: 1
 
     // Tooltips
     property int tooltipHeight: Math.round(fontPixelSize * 2)
+
+    // Scales
+    property int defaultScale: 100
 
     // Functions
     function scalePx(size) {

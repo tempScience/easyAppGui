@@ -21,7 +21,7 @@ ChartView {
     legend.visible: false
     legend.alignment: Qt.AlignBottom
     legend.font.family: EaStyle.Fonts.fontFamily
-    legend.font.pixelSize: EaStyle.Fonts.fontPixelSize
+    legend.font.pixelSize: EaStyle.Sizes.fontPixelSize
     legend.markerShape: Legend.MarkerShapeRectangle
     legend.labelColor: EaStyle.Colors.chartForeground
     Behavior on legend.labelColor {
@@ -35,7 +35,7 @@ ChartView {
     }
 
     titleFont.family: EaStyle.Fonts.fontFamily
-    titleFont.pixelSize: EaStyle.Fonts.fontPixelSize
+    titleFont.pixelSize: EaStyle.Sizes.fontPixelSize
     titleFont.bold: true
     titleColor: EaStyle.Colors.chartForeground
     /* BREAKS ANIMATION !

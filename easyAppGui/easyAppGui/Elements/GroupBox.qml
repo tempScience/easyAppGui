@@ -5,6 +5,7 @@ import QtQuick.Templates 2.13 as T
 //import QtQuick.Controls.impl 2.13
 
 import easyAppGui.Style 1.0 as EaStyle
+import easyAppGui.Animations 1.0 as EaAnimations
 
 T.GroupBox {
     id: control
@@ -14,6 +15,7 @@ T.GroupBox {
     property bool collapsed: collapsible ? true : false
 
     implicitWidth: Math.max(
+                       parent.width,
                        titleArea.implicitWidth + leftPadding + rightPadding,
                        contentItem.implicitWidth + leftPadding + rightPadding)
     implicitHeight: titleArea.implicitHeight + contentItem.height + spacing
@@ -27,7 +29,7 @@ T.GroupBox {
     rightPadding: 0
 
     title: "Untitled group"
-    width: parent.width
+    //width: parent.width
 
     // Title area
     label: Button {
@@ -35,7 +37,7 @@ T.GroupBox {
 
         enabled: collapsible
 
-        implicitHeight: 30//EaStyle.Sizes.tabBarHeight
+        implicitHeight: EaStyle.Sizes.tabBarHeight
         width: control.width
 
         topInset: 0
@@ -50,14 +52,17 @@ T.GroupBox {
 
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: titleArea.left
-            anchors.leftMargin: EaStyle.Fonts.fontPixelSize * 0.75
+            anchors.leftMargin: EaStyle.Sizes.fontPixelSize * 0.75
 
             font.family: EaStyle.Fonts.iconsFamily
-            font.pixelSize: EaStyle.Fonts.fontPixelSize * 0.7
+            font.pixelSize: EaStyle.Sizes.fontPixelSize * 0.7
 
             text: collapsible ? "play" : "circle"
 
             color: EaStyle.Colors.themeAccent
+            Behavior on color {
+                EaAnimations.ThemeChange {}
+            }
 
             transform: Rotation {
                 id: iconRotation
@@ -74,15 +79,18 @@ T.GroupBox {
         Label {
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: icon.right
-            anchors.leftMargin: EaStyle.Fonts.fontPixelSize * 0.75
+            anchors.leftMargin: EaStyle.Sizes.fontPixelSize * 0.75
 
             font.family: EaStyle.Fonts.fontFamily
-            font.pixelSize: EaStyle.Fonts.fontPixelSize
+            font.pixelSize: EaStyle.Sizes.fontPixelSize
             font.bold: true
 
             text: control.title
 
             color: EaStyle.Colors.themeAccent
+            Behavior on color {
+                EaAnimations.ThemeChange {}
+            }
         }
 
         // On clicked animation
@@ -103,10 +111,12 @@ T.GroupBox {
         anchors.leftMargin: icon.anchors.leftMargin
         anchors.rightMargin: anchors.leftMargin
 
-        topPadding: 0
+        topPadding: EaStyle.Sizes.fontPixelSize * 0.5
         bottomPadding: anchors.leftMargin
         leftPadding: icon.width * 0.5
         rightPadding: 0
+
+        spacing: EaStyle.Sizes.sideBarPadding
 
         //width: control.width
         height: 0
@@ -121,11 +131,13 @@ T.GroupBox {
         id: bottomBorder
 
         y: control.height - height
-
         width: control.width
         height: EaStyle.Sizes.borderThickness
 
         color: EaStyle.Colors.appBorder
+        Behavior on color {
+            EaAnimations.ThemeChange {}
+        }
     }
 
     // Collapsion animation

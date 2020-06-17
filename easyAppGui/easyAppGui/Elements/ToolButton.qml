@@ -29,7 +29,7 @@ T.ToolButton {
     */
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.pixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
     //ToolTip.visible: hovered && ToolTip.text !== ""
 

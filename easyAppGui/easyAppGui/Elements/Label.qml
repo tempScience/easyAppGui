@@ -8,7 +8,7 @@ T.Label {
     id: control
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
     color: enabled ? EaStyle.Colors.themeForeground : EaStyle.Colors.themeForegroundDisabled //Material.foreground : Material.hintTextColor
     Behavior on color {

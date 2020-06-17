@@ -21,7 +21,7 @@ T.ApplicationWindow {
     minimumHeight: EaStyle.Sizes.appWindowMinimumHeight
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
     color: EaStyle.Colors.contentBackground
     Behavior on color {

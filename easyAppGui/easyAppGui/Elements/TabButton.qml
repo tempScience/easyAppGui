@@ -21,73 +21,71 @@ T.TabButton {
                                   checked || down ?
                                       EaStyle.Colors.themeAccent :
                                       EaStyle.Colors.themeForeground
-    //property color backgroundColor: value
 
+    width: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                    implicitContentWidth + leftPadding + rightPadding)
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                             implicitContentHeight + topPadding + bottomPadding)
 
-    width: implicitContentWidth + leftPadding + rightPadding
-    height: 40//parent.height
-
-    implicitHeight: Math.max(implicitContentHeight + topPadding + bottomPadding)
-    implicitWidth: Math.max(implicitContentWidth + leftPadding + rightPadding)
-
+    topInset: 0
+    bottomInset: 0
     topPadding: 0
     bottomPadding: 0
-    leftPadding: EaStyle.Fonts.fontPixelSize * 0.5
-    rightPadding: EaStyle.Fonts.fontPixelSize * 0.5
-    spacing: EaStyle.Fonts.fontPixelSize * 0.5
+    leftPadding: EaStyle.Sizes.fontPixelSize * 0.5
+    rightPadding: EaStyle.Sizes.fontPixelSize * 0.5
+    spacing: EaStyle.Sizes.fontPixelSize * 0.5
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
-    //ToolTip.visible: hovered && ToolTip.text !== ""
-
+    // ToolTip
     EaElements.ToolTip {
-        //parent: control
         text: control.ToolTip.text
         visible: control.hovered && text !== ""
     }
 
-
     // Icon with text label
-    contentItem: Row {
-        spacing: control.spacing
+    contentItem: Item {
+        implicitWidth: row.width
 
-        // Icon
-        Label {
-            height: control.height
-            verticalAlignment: Text.AlignVCenter
+        Row {
+            id: row
+            width: childrenRect.width
+            spacing: control.spacing
+            anchors.centerIn: parent
 
-            font.family: iconFontFamily
-            font.pixelSize: iconFontPixelSize
+            // Icon
+            Label {
+                font.family: iconFontFamily
+                font.pixelSize: iconFontPixelSize
 
-            text: control.fontIcon
+                text: control.fontIcon
 
-            color: control.textColor
-            Behavior on color {
-                EaAnimations.ThemeChange {}
+                color: control.textColor
+                Behavior on color {
+                    EaAnimations.ThemeChange {}
+                }
             }
-        }
 
-        // Text label
-        Label {
-            height: control.height
-            verticalAlignment: Text.AlignVCenter
+            // Text label
+            Label {
+                font.family: control.font.family
+                font.pixelSize: control.font.pixelSize
 
-            font.family: control.font.family
-            font.pixelSize: control.font.pixelSize
+                text: control.text
 
-            text: control.text
-
-            color: control.textColor
-            Behavior on color {
-                EaAnimations.ThemeChange {}
+                color: control.textColor
+                Behavior on color {
+                    EaAnimations.ThemeChange {}
+                }
             }
         }
     }
 
     // Background
     background: Rectangle {
-        implicitHeight: 50
+        implicitHeight: EaStyle.Sizes.tabBarHeight
+
         color: rippleArea.containsMouse ?
                    (rippleArea.containsPress ?
                         EaStyle.Colors.appBarButtonBackgroundPressed :

@@ -32,12 +32,6 @@ QtObject {
 
     readonly property string iconsFamily: fontAwesomeSolid.name
 
-    // Font sizes
-    property Text _text: Text { font.pixelSize: 14 }
-
-    readonly property int fontPointSize: _text.font.pointSize
-    readonly property int fontPixelSize: _text.font.pixelSize
-
     // Logic
     function fontPath(fontDirName, fontFileName) {
         const fontsDirPath = Qt.resolvedUrl("../Resources/Fonts")

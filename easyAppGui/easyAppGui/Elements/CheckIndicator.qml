@@ -46,7 +46,7 @@ Rectangle {
         text: "\ue800" // ????
 
         font.family: EaStyle.Fonts.fontFamily
-        font.pixelSize: EaStyle.Fonts.fontPixelSize
+        font.pixelSize: EaStyle.Sizes.fontPixelSize
 
         scale: indicatorItem.checkState === Qt.Checked ? 1 : 0
         Behavior on scale {

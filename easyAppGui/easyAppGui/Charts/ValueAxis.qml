@@ -29,8 +29,8 @@ ValueAxis {
     }
 
     labelsFont.family: EaStyle.Fonts.fontFamily
-    labelsFont.pixelSize: EaStyle.Fonts.fontPixelSize
+    labelsFont.pixelSize: EaStyle.Sizes.fontPixelSize
     titleFont.family: EaStyle.Fonts.fontFamily
-    titleFont.pixelSize: EaStyle.Fonts.fontPixelSize
+    titleFont.pixelSize: EaStyle.Sizes.fontPixelSize
     titleFont.bold: true
 }

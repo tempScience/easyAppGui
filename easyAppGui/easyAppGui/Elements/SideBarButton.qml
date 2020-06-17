@@ -33,12 +33,12 @@ T.Button {
 
     padding: 0
 
-    spacing: EaStyle.Fonts.fontPixelSize * 0.5
+    spacing: EaStyle.Sizes.fontPixelSize * 0.5
 
     //flat: true
 
     font.family: EaStyle.Fonts.fontFamily
-    font.pixelSize: EaStyle.Fonts.fontPixelSize
+    font.pixelSize: EaStyle.Sizes.fontPixelSize
 
     EaElements.ToolTip {
         //parent: control
@@ -53,7 +53,7 @@ T.Button {
             anchors.centerIn: parent
 
             // Icon
-            EaElements.Label {
+            Label {
                 font.family: iconFontFamily
                 font.pixelSize: iconFontPixelSize
 
