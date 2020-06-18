@@ -20,3 +20,6 @@ TabButton 1.0 TabButton.qml
 ToolBar 1.0 ToolBar.qml
 ToolButton 1.0 ToolButton.qml
 ToolTip 1.0 ToolTip.qml
+
+RemotePointer 1.0 RemotePointer.qml
+RemoteController 1.0 RemoteController.qml

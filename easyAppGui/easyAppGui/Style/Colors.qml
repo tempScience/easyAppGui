@@ -36,7 +36,7 @@ QtObject {
     property color appBarBorder: isDarkTheme ? "#2e2e2e" : "#d6d6d6"
 
     property color appBarButtonBackground: "transparent"
-    property color appBarButtonBackgroundHovered: isDarkTheme ? "#50666666" : "#20666666"
+    property color appBarButtonBackgroundHovered: "transparent"//isDarkTheme ? "#50666666" : "#20666666" // temporary disable because of problems with RemoteController if parent: Overlay.overlay !?
     property color appBarButtonBackgroundPressed: isDarkTheme ? "#90666666" : "#40666666"
     property color appBarButtonForeground: isDarkTheme ? "#ccc" : "#444"
 
