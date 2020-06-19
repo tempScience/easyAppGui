@@ -9,6 +9,7 @@ MouseArea {
 
     parent: Overlay.overlay // makes buttons background hovered-like !?
     anchors.fill: parent
+    z: 999 // to be above dialog, combobox, etc. windows
 
     hoverEnabled: true
     acceptedButtons: Qt.NoButton
@@ -86,15 +87,15 @@ MouseArea {
         event.mouseRelease(item, x, y, button, modifiers, delay)
     }
 
-    function mouseClick(item) {
-        pointerMove(item)
+    function mouseClick(item, x, y) {
+        pointerMove(item, x, y)
         wait(pointer.moveDuration)
 
         wait(100)
 
-        mousePress(item)
+        mousePress(item, x, y)
         wait(pointer.pressDuration)
-        mouseRelease(item)
+        mouseRelease(item, x, y)
         wait(pointer.clickRelaxation - pointer.pressDuration)
 
         wait(500)
@@ -104,9 +105,26 @@ MouseArea {
         const modifiers = Qt.NoModifier
         const delay = -1
         for (const c of text) {
-            event.keyClickChar(c, modifiers, -delay)
+            event.keyClickChar(c, modifiers, delay)
             wait(100)
         }
     }
 
+    function clearText(count) {
+        const modifiers = Qt.NoModifier
+        const delay = -1
+        const key = Qt.Key_Backspace//Key_Clear//Key_Delete
+        while (count > 0) {
+            event.keyClick(key, modifiers, delay)
+            wait(100)
+            count -= 1
+        }
+    }
+
+    function keyClick(key) {
+        const modifiers = Qt.NoModifier
+        const delay = -1
+        event.keyClick(key, modifiers, delay)
+        wait(500)
+    }
 }

@@ -12,6 +12,8 @@ import easyAppGui.Style 1.0 as EaStyle
 import easyAppGui.Globals 1.0 as EaGlobals
 import easyAppGui.Elements 1.0 as EaElements
 
+import Gui.Globals 1.0 as ExGlobals
+
 EaElements.Dialog {
     //anchors.centerIn: parent
 
@@ -36,9 +38,10 @@ EaElements.Dialog {
             }
 
             EaElements.ComboBox {
+                id: themeSelector
                 width: EaStyle.Sizes.fontPixelSize * 9
                 model: [qsTr("Dark"), qsTr("Light"), qsTr("System")]
-                currentIndex: EaStyle.Colors.theme === EaStyle.Colors.DarkTheme ? 0 : 1
+                currentIndex: EaStyle.Colors.isDarkTheme ? 0 : 1 // EaStyle.Colors.theme === EaStyle.Colors.DarkTheme ? 0 : 1
                 onCurrentTextChanged: {
                     if (currentIndex === 0 && EaStyle.Colors.theme !== EaStyle.Colors.DarkTheme) {
                         EaStyle.Colors.theme = EaStyle.Colors.DarkTheme
@@ -48,6 +51,7 @@ EaElements.Dialog {
                         EaStyle.Colors.theme = EaStyle.Colors.systemTheme
                     }
                 }
+                Component.onCompleted: ExGlobals.Variables.themeSelector = themeSelector
             }
         }
 
