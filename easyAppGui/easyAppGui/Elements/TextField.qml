@@ -5,6 +5,7 @@ import QtQuick.Controls.impl 2.13
 
 import easyAppGui.Style 1.0 as EaStyle
 import easyAppGui.Animations 1.0 as EaAnimations
+import easyAppGui.Elements 1.0 as EaElements
 
 T.TextField {
     id: control
@@ -40,7 +41,7 @@ T.TextField {
         EaAnimations.ThemeChange {}
     }
 
-    cursorDelegate: CursorDelegate { }
+    cursorDelegate: EaElements.CursorDelegate { }
 
     PlaceholderText {
         id: placeholder

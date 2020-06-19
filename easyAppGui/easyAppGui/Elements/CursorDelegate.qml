@@ -1,11 +1,15 @@
 import QtQuick 2.13
 
+import easyAppGui.Style 1.0 as EaStyle
+
 Rectangle {
     id: cursor
 
-    ///color: parent.Material.accentColor
-    width: 2
     visible: parent.activeFocus && !parent.readOnly && parent.selectionStart === parent.selectionEnd
+
+    width: 2
+
+    color: EaStyle.Colors.themeAccent
 
     Connections {
         target: cursor.parent

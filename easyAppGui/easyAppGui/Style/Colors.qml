@@ -15,7 +15,7 @@ QtObject {
     property color themePrimary: isDarkTheme ? "#222" : "#ddd"
     property color themeBackground: isDarkTheme ? "#333" : "#e9e9e9"
     property color themeForeground: isDarkTheme ? "#eee" : "#333"
-    property color themeForegroundDisabled: isDarkTheme ? "#888": "#999" // control.Material.hintTextColor
+    property color themeForegroundDisabled: isDarkTheme ? "#888": "#bbb" // control.Material.hintTextColor
 
     // System theme
     property var _systemThemeChecker: Item { Material.theme: Material.System }
